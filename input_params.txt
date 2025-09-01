@@ -1,0 +1,30 @@
+200  	 				n_a			% number of asset grid points
+18       				n_z			% number of endowment grid points 
+71		 				n_age		% number of age grid points
+42		 				R_age		% retirement age
+50000	 				NN			% number of individuals for simulation 
+3.2    				    sigma 		% risk aversion
+0.98	 				beta		% discount factor
+0.5	 				    alpha		% capital share
+0.1     				delta 		% depreciation rate
+0.82 	 			    tauk	    % capital income tax rate
+-0.18                   taul        % labour income tax rate
+0.167	 				theta		% social security tax rate
+0.35                    rho         % NEW: replacement rate (initial guess)
+0.90 				    gamma		% persistence of earnings shock
+0.048	 				var_e   	% std dev of innovation to earnings shock
+0.54 				    var_y1 		% std dev of initial earnings shock		 
+0.005	 				n_pop		% population growth rate
+0.895944617952574  		TFP			% TFP in production function
+2						z_grid_opt	% 1: [z_min,z_max1], 2: [z_min,z_max1]+z_max2
+-4						z_min_w		% z_min = z_min_w*sd_y1
+4 						z_max_w1	% z_max1 = z_max_w1*sd_y1
+6						z_max_w2    % z_max2 = z_max_w2*sd_y1    
+0.0  	 				a_min		% minimum asset level
+400      				a_max		% maximum asset level
+2.0   	 				a_scale		% controls interval between asset grid points
+5.7456936314413918e+00	K0			% initial K guess
+1.3959423564198215e-01	T0			% initial T guess
+1						run_opt		% 1: solve for steady state, 2: calibrate model
+
+
