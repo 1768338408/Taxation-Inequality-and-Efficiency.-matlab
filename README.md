@@ -16,6 +16,16 @@ newtab
 Calibration via SMM – When run_opt = 2, the model is calibrated using a simulated method of moments (SMM) to match empirical moments of the capital–output ratio and the earnings Gini coefficient. The routine calibrate_model.m minimises a weighted sum of squared moment errors, adjusting the discount factor (β) and risk‑aversion parameter (σ)
 . The calibrated parameters and model moments are printed and saved for later use.
 
+| File                    | Description                                                                                                                                                                            |
+| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **`main.m`**            | Top‑level script that reads parameters, chooses a run mode and calls the solver or calibration routine.  It also produces side‑by‑side plots comparing baseline and reform scenarios.  |
+| **`solve_model.m`**     | Core steady‑state solver.  Iterates on capital and transfers, solves households’ value functions, simulates the distribution, and computes macro aggregates and inequality statistics. |
+| **`calibrate_model.m`** | Implements simulated method of moments.  Targets the capital‑to‑output ratio and earnings Gini, and uses `lsqnonlin` to estimate `β` and `σ`.                                          |
+| **`calc_dist_stats.m`** | Computes wealth, earnings and disposable‑income distributions; returns Gini coefficients, top shares and bottom shares, both overall and by age group.                                 |
+| **`plot_*` scripts**    | Produce figures of distributions, value/policy functions, life‑cycle profiles and Gini curves for both single and comparative scenarios.                                               |
+| **`input_params.txt`**  | Plain‑text file containing all model and policy parameters (grid sizes, tax rates, production parameters, demographics, etc.).                                                         |
+| **`input_vectors.txt`** | Contains the deterministic efficiency profile (`ȳ_i`) and survival probabilities (`s_{i+1}`) for each age.                                                                            |
+
 Key Components
 File	Description
 main.m	Top‑level script that reads parameters, chooses a run mode and calls the solver or calibration routine. It also produces side‑by‑side plots comparing baseline and reform scenarios
